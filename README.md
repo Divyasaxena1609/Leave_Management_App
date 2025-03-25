@@ -1,72 +1,98 @@
-Leave Management App
-A Ruby on Rails-based application that allows employees to apply for leaves, HR to review requests, and generate reports.
+Leave Management System
+Overview
+This is a Ruby on Rails application that allows employees to apply for leaves and HR to manage leave requests. The application provides a REST API where employees can submit leave requests, and HR can approve or reject them.
 
 📌 Features
-Employee login & registration
+Employee Functions:
 
 Apply for leave
 
 View leave history
 
-HR leave approval & rejection
+HR/Admin Functions:
 
-Export reports in CSV/PDF format
+Approve/reject leave requests
 
-🛠 Tech Stack
-Ruby Version: 3.x (Check with ruby -v)
+View all leave requests
 
-Rails Version: 7.x (Check with rails -v)
+Generate leave reports
 
-Database: PostgreSQL / MySQL / SQLite
+Authentication & Role Management
 
-Authentication: Devise
+Database Integration
 
-Front-End: ERB, Bootstrap (optional)
+RESTful API for seamless interaction
 
-Background Jobs: Sidekiq (if applicable)
+🛠 Technologies Used
+Backend: Ruby on Rails
 
-📌 Installation Steps
-Clone the Repository
+Database: PostgreSQL / MySQL
 
+Authentication: Devise (or JWT-based auth)
+
+Front-end (Optional): React.js / Angular / ERB Templates
+
+API Documentation: Swagger (if included)
+
+📌 PORTS
+Backend: http://localhost:3000
+
+
+📌 Folder Structure
+pgsql
+Copy
+Edit
+leave_management_system/
+│── app/
+│   ├── controllers/
+│   │   ├── leaves_controller.rb
+│   ├── models/
+│   │   ├── leave.rb
+│   ├── services/
+│   │   ├── leave_service.rb
+│   ├── views/
+│── config/
+│   ├── routes.rb
+│   ├── database.yml
+│── db/
+│   ├── migrate/
+│── public/
+│── temp/
+│── Gemfile
+│── README.md
+📌 How to Run
+1. Clone the Repository
 sh
 Copy
 Edit
-git clone https://github.com/Divyasaxena1609/Leave_Management_App.git
-cd Leave_Management_App
-Install Dependencies
-
+git clone https://github.com/your-repo/leave-management-system.git
+cd leave-management-system
+2. Install Dependencies
 sh
 Copy
 Edit
 bundle install
-Set Up Database
+3. Configure the Database
+Update config/database.yml with your database credentials.
 
-Configure the database in config/database.yml
-
-Run migrations:
-
+yaml
+Copy
+Edit
+development:
+  adapter: postgresql
+  database: leave_management_dev
+  username: postgres
+  password: your_password
+  host: localhost
+  port: 5432
+4. Set Up the Database
 sh
 Copy
 Edit
 rails db:create
 rails db:migrate
-Set Up Environment Variables Create a .env file and add:
-
-ini
-Copy
-Edit
-DATABASE_USERNAME=your_username
-DATABASE_PASSWORD=your_password
-Run the Server
-
+5. Run the Application
 sh
 Copy
 Edit
 rails server
-The app will be available at http://localhost:3000
-
-📌 Usage
-Employees can log in, apply for leave, and track status.
-
-HR Managers can approve/reject leave requests and generate reports.
-
