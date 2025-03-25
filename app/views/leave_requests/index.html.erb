@@ -1,0 +1,25 @@
+<h1>Your Leave Requests</h1>
+
+<div class="leave-requests-container">
+  <table>
+    <tr>
+      <th>Start Date</th>
+      <th>End Date</th>
+      <th>Reason</th>
+      <th>Status</th>
+      <th>HR Name</th> 
+    </tr>
+    
+    <% @leave_requests.each do |leave| %>
+      <tr>
+        <td><%= leave.start_date %></td>
+        <td><%= leave.end_date %></td>
+        <td><%= leave.reason %></td>
+        <td><%= leave.status.capitalize %></td>
+        <td><%= leave.hr.name if leave.hr.present? %></td> 
+      </tr>
+    <% end %>
+  </table>
+
+  <%= link_to "Back to Dashboard", root_path, class: "btn btn-primary" %>
+</div>

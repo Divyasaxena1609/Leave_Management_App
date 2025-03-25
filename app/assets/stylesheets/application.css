@@ -1,0 +1,157 @@
+/*
+ *= require_self
+ *= require devise
+*/
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+
+body, ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Navigation Bar */
+nav {
+  background-color: #0073e6;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: flex-end; 
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  display: flex;
+  gap: 10px;
+  align-items: center; 
+}
+
+nav ul li {
+  margin-right: 30px;
+  display: inline-block;
+}
+
+nav ul li a, 
+nav ul li button {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+nav ul li a:hover,
+nav ul li button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+nav ul li form {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li .logout-btn {
+  background: transparent;
+  color: white;
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out;
+  border: none;
+  cursor: pointer;
+}
+
+nav ul li .logout-btn:hover {
+  background: #d9534f;
+}
+
+/* Make space for fixed navbar */
+.container {
+  margin-top: 150px;
+}
+
+/* User Info */
+.user-info {
+  background: white;
+  padding: 20px;
+  margin: 30px auto;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.leave-balance {
+  color: #d9534f;
+  font-size: 20px;
+}
+
+/* Authentication Section */
+.auth-section {
+  margin-top: 30px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.btn-login {
+  background-color: #0073e6;
+  color: white;
+}
+
+.btn-signup {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.alert {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+

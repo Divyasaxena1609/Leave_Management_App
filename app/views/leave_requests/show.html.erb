@@ -1,0 +1,21 @@
+<div class="leave-container">
+  <h1>Leave Request Details</h1>
+
+  <table>
+    <tr>
+      <th>Start Date</th>
+      <th>End Date</th>
+      <th>Reason</th>
+      <th>Status</th>
+    </tr>
+    <tr>
+      <td><%= @leave_request.start_date %></td>
+      <td><%= @leave_request.end_date %></td>
+      <td><%= @leave_request.reason %></td>
+      <td><%= @leave_request.status.capitalize %></td>
+    </tr>
+  </table>
+
+  <%= link_to "View All Applied Leaves", leave_requests_path, class: "btn btn-secondary" %>
+  <%= link_to "Back to Dashboard", root_path, class: "btn btn-primary" %>
+</div>

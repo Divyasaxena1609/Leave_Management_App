@@ -1,0 +1,20 @@
+<div class="home-container">
+  <div>
+    <h1>Welcome to the Leave Management System</h1>
+  </div>
+
+  <% if user_signed_in? %>
+    <div class="user-info">
+      <img src="<%= asset_path 'User_icon.png' %>" alt="User Icon" class="user-icon">
+      <p>Hello, <strong><%= current_user.name %></strong></p>
+
+      <% if current_user.employee? %>
+        <p>Your leave balance: <strong class="leave-balance"><%= current_user.leave_balance %></strong></p>
+      <% end %>
+    </div>
+  <% else %>
+    <div class="auth-section">
+      <p>Please <%= link_to "Login", new_user_session_path, class: "btn btn-login" %> or <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-signup" %></p>
+    </div>
+  <% end %>
+</div>

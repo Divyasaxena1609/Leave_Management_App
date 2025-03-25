@@ -1,0 +1,38 @@
+<% if flash[:notice] %>
+  <p class="alert alert-success"><%= flash[:notice] %></p>
+<% elsif flash[:alert] %>
+  <p class="alert alert-danger"><%= flash[:alert] %></p>
+<% end %>
+
+<h1>Pending Leave Requests</h1>
+
+<% if @leave_requests.any? %>
+  <table>
+    <tr>
+      <th>Employee</th>
+      <th>Email</th>
+      <th>Start Date</th>
+      <th>End Date</th>
+      <th>Reason</th>
+      <th>Action</th>
+    </tr>
+    
+    <% @leave_requests.each do |leave| %>
+      <tr>
+        <td><%= leave.employee.name %></td>
+        <td><%= leave.employee.email %></td>
+        <td><%= leave.start_date %></td>
+        <td><%= leave.end_date %></td>
+        <td><%= leave.reason %></td>
+        <td>
+         <div class="btn-group">
+          <%= link_to "Approve", hr_leave_request_path(leave, status: "approved"), method: :patch ,data: { turbo: false }, class: "btn btn-prime"%>
+          <%= link_to "Decline", hr_leave_request_path(leave, status: "declined"), method: :patch , data: { turbo: false },class: "btn btn-sec"%>
+         </div>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+<% else %>
+  <p>No pending leave requests assigned to you.</p>
+<% end %>

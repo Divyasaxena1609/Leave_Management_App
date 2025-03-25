@@ -1,0 +1,7 @@
+<h1>Leave Request Status</h1>
+
+<p>Dear <%= @leave_request.employee.name %>,</p>
+
+<p>Your leave request from <%= @leave_request.start_date %> to <%= @leave_request.end_date %> has been <strong><%= @leave_request.status.capitalize %></strong> by <%= @leave_request.hr.name %>.</p>
+
+<p>Thank you.</p>

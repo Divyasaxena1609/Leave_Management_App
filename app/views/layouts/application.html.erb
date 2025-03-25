@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Leave Management</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag "application", media: "all", "data-turbo-track": "reload" %>
+  <%= stylesheet_link_tag 'devise_edit', media: 'all' %>
+  <%= stylesheet_link_tag 'leave_request', media: 'all' %>
+  <%= javascript_include_tag "application", defer: true %>
+</head>
+<body>
+  <% if user_signed_in? %>
+    <nav>
+      <ul>
+        <li><%= link_to "Dashboard", root_path %></li>
+        <% if current_user.employee? %>
+          <li><%= link_to "Apply for Leave", new_leave_request_path %></li>
+          <li><%= link_to "All Applied Leaves", leave_requests_path %></li> 
+        <% elsif current_user.hr? %>
+          <li><%= link_to "Pending Requests", hr_leave_requests_path %></li>
+          <li><%= link_to "Export Reports", hr_reports_path %></li>
+        <% end %>
+
+        <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+
+        <li>
+          <%= button_to "Logout", destroy_user_session_path, method: :delete, class: "logout-btn" %>
+        </li>
+      </ul>
+    </nav>
+  <%end%>
+  <% flash.each do |key, message| %>
+    <div class="alert <%= key == 'notice' ? 'alert-success' : 'alert-danger' %>">
+      <%= message %>
+    </div>
+  <% end %>
+  
+  <div class="container">
+    <%= yield %>
+  </div>
+</body>
+</html>

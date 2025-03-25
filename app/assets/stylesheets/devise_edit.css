@@ -1,0 +1,94 @@
+/* Edit Profile Page Styles */
+.edit-profile-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .edit-profile-container h2 {
+    color: #0073e6;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Form Fields */
+  .field {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  .field label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .field input {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .field em {
+    font-size: 12px;
+    color: #666;
+  }
+  
+  /* Submit Button */
+  .actions input[type="submit"] {
+    background-color: #0073e6;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    width: 90%;
+  }
+  
+  .actions input[type="submit"]:hover {
+    background-color: #005bb5;
+  }
+  
+  /* Cancel Account Section */
+  .cancel-account {
+    margin-top: 20px;
+    color: red;
+    text-align: center;
+    font-size: 16px;
+  }
+  
+  .cancel-account button {
+    background: #d9534f;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .cancel-account button:hover {
+    background: #c9302c;
+  }
+  
+  /* Back Link */
+  .back-link {
+    display: block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #0073e6;
+  }
+  
+  .back-link:hover {
+    text-decoration: underline;
+  }
+  
