@@ -17,6 +17,8 @@ This is a Ruby on Rails application that allows employees to apply for leaves an
 - View all leave requests
 
 - Generate leave reports
+  
+##
 
 - Authentication & Role Management
 
