@@ -1,47 +1,47 @@
-Leave Management System
-Overview
+# Leave Management System
+
+## Overview
 This is a Ruby on Rails application that allows employees to apply for leaves and HR to manage leave requests. The application provides a REST API where employees can submit leave requests, and HR can approve or reject them.
 
-📌 Features
-Employee Functions:
+## Features
 
-Apply for leave
+## Employee Functions:
 
-View leave history
+- Apply for leave
+- View leave history
 
-HR/Admin Functions:
+## HR/Admin Functions:
 
-Approve/reject leave requests
+- Approve/reject leave requests
 
-View all leave requests
+- View all leave requests
 
-Generate leave reports
+- Generate leave reports
 
-Authentication & Role Management
+- Authentication & Role Management
 
-Database Integration
+- Database Integration
 
-RESTful API for seamless interaction
+- RESTful API for seamless interaction
 
-🛠 Technologies Used
-Backend: Ruby on Rails
+## Technologies Used
 
-Database: PostgreSQL / MySQL
+- Backend: Ruby on Rails
 
-Authentication: Devise (or JWT-based auth)
+- Database: PostgreSQL / MySQL
 
-Front-end (Optional): React.js / Angular / ERB Templates
+- Authentication: Devise (or JWT-based auth)
 
-API Documentation: Swagger (if included)
+- Front-end (Optional): React.js / Angular / ERB Templates
 
-📌 PORTS
-Backend: http://localhost:3000
+## PORTS
+
+- Backend: http://localhost:3000
 
 
-📌 Folder Structure
-pgsql
-Copy
-Edit
+## Folder Structure
+
+```
 leave_management_system/
 │── app/
 │   ├── controllers/
@@ -60,24 +60,22 @@ leave_management_system/
 │── temp/
 │── Gemfile
 │── README.md
-📌 How to Run
+```
+## How to Run
 1. Clone the Repository
-sh
-Copy
-Edit
+```sh
 git clone https://github.com/your-repo/leave-management-system.git
 cd leave-management-system
+```
 2. Install Dependencies
-sh
-Copy
-Edit
+```sh
 bundle install
+```
 3. Configure the Database
-Update config/database.yml with your database credentials.
 
-yaml
-Copy
-Edit
+- Update config/database.yml with your database credentials.
+
+```yaml
 development:
   adapter: postgresql
   database: leave_management_dev
@@ -85,14 +83,14 @@ development:
   password: your_password
   host: localhost
   port: 5432
+```
 4. Set Up the Database
-sh
-Copy
-Edit
+
+```sh
 rails db:create
 rails db:migrate
+```
 5. Run the Application
-sh
-Copy
-Edit
+```sh
 rails server
+```
